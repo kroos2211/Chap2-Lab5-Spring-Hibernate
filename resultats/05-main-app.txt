@@ -1,0 +1,58 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------< com.microservice:microservice-product >----------------
+[INFO] Building microservice-product 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- exec:3.3.0:java (default-cli) @ microservice-product ---
+=== CHAPITRE 2 - LAB 5 ===
+=== INITIALISATION SPRING ===
+Oct 22, 2026 2:09:37 PM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate ORM core version 5.6.9.Final
+Oct 22, 2026 2:09:37 PM org.hibernate.annotations.common.reflection.java.JavaReflectionManager <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+Oct 22, 2026 2:09:38 PM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Oct 22, 2026 2:09:38 PM org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator initiateService
+INFO: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Contexte et ProductService disponibles.
+=== CONFIGURATION HIBERNATE ===
+SessionFactory ouverte : true
+Base connectee : H2
+=== CREATION DES PRODUITS ===
+Cree : Product{id=1, name='Microservice Gateway', price=149.99}
+Cree : Product{id=2, name='Laptop', price=999.99}
+Cree : Product{id=3, name='Smartphone', price=499.99}
+Cree : Product{id=4, name='Clavier', price=49.99}
+=== LISTE DES PRODUITS ===
+Product{id=1, name='Microservice Gateway', price=149.99}
+Product{id=2, name='Laptop', price=999.99}
+Product{id=3, name='Smartphone', price=499.99}
+Product{id=4, name='Clavier', price=49.99}
+Total en base : 4
+=== RECHERCHE PAR ID ===
+ID existant : Product{id=2, name='Laptop', price=999.99}
+ID inexistant : null
+=== MODIFICATION PRODUIT ===
+Prix persiste : Product{id=2, name='Laptop', price=899.99}
+=== SUPPRESSION PRODUIT ===
+Produit supprime, recherche en base : null
+=== VALIDATION PRIX NEGATIF ===
+Prix negatif refuse : Prix invalide : valeur negative ou non finie
+Aucun produit invalide en base.
+=== TEST TRANSACTION COMMIT ===
+Commit confirme en base : Product{id=5, name='Commit demo', price=10.0}
+=== TEST TRANSACTION ROLLBACK ===
+Exception apres ecriture : Echec intentionnel apres ecriture pour verifier le rollback
+Verification en base apres rollback : produit absent.
+=== RESULTAT FINAL ===
+Produits restants en base : 4
+Oct 22, 2026 2:09:38 PM org.hibernate.tool.schema.internal.SchemaDropperImpl$DelayedDropActionImpl perform
+INFO: HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.119 s
+[INFO] Finished at: 2026-10-22T14:09:38+01:00
+[INFO] ------------------------------------------------------------------------

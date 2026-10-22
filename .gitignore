@@ -1,0 +1,10 @@
+/target/
+/.m2/
+/.idea/
+*.iml
+.env
+application-local.properties
+*password*.properties
+*.log
+*.tmp
+*~
